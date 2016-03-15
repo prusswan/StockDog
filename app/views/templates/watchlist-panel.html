@@ -14,6 +14,8 @@
     <div class="list-group">
       <!-- [3] Repeat over each list in watchlists and create link -->
       <a class="list-group-item"
+        ng-class="{ active: currentList == list.id }"
+        ng-click="gotoList(list.id)"
         ng-repeat="list in watchlists track by $index">
         {{list.name}}
         <!-- [4] Delete this list by invoking deleteList() handler -->
